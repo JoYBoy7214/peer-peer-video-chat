@@ -35,8 +35,7 @@ A full-stack platform enabling secure, real-time video and audio communication d
 
 ```bash
 # Clone the repository
-git clone <repo_url>
-cd <backend_folder>
+git clone https://github.com/JoYBoy7214/peer-peer-video-chat.git
 npm install
 node index.js
 ```
@@ -80,5 +79,6 @@ Gowtham Balaji
 ## License
 
 This project is licensed under the MIT License.
+
 
 
