@@ -22,7 +22,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     // Create peer connection AFTER we have media
     createPeerConnection();
 
-    // Join room
+    
     socket.emit("join", roomId);
   })
   .catch(err => {
@@ -32,12 +32,11 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 function createPeerConnection() {
   peerConnection = new RTCPeerConnection(config);
 
-  // Send our media tracks to the peer
+  
   localStream.getTracks().forEach(track => {
     peerConnection.addTrack(track, localStream);
   });
 
-  // Show remote stream when it's received
   peerConnection.ontrack = event => {
     remoteVideo.srcObject = event.streams[0];
   };
